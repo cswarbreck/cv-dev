@@ -6286,7 +6286,8 @@ html {
   box-sizing: border-box;
   font-family: "Anonymous Pro", monospace;
   color: #555;
-  font-size: 16px; }
+  font-size: 16px;
+  min-height: 600px !important; }
   @media (min-width: 6.25em) {
     html {
       font-size: 17px; } }
@@ -6368,19 +6369,21 @@ a {
   bottom: 0;
   z-index: 1000;
   width: 80px;
-  border-right: 2px dashed black;
+  border-right: 3px double black;
   color: rgba(0, 0, 0, 0.5);
   font-family: "nimbus-sans", sans-serif;
   text-transform: uppercase;
   letter-spacing: .0875rem;
-  font-size: 12px;
+  font-size: 13px;
   transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1); }
   .side:hover {
     color: rgba(0, 0, 0, 0.5); }
   .side .side__inner {
     position: relative;
     height: 100%;
-    white-space: nowrap; }
+    white-space: nowrap;
+    min-height: 750px !important;
+    overflow: scroll; }
   .side a {
     color: inherit;
     word-spacing: 0;
@@ -6403,9 +6406,10 @@ a {
     top: auto;
     bottom: 120px; }
     .side .bottom:hover a {
-      color: rgba(0, 0, 0, 0.2); }
+      color: black;
+      text-transform: uppercase; }
       .side .bottom:hover a:hover {
-        color: rgba(0, 0, 0, 0.8); }
+        color: seagreen; }
 
 /**
  * The first navigation
@@ -6429,7 +6433,7 @@ a {
     padding: 1em 0;
     font-family: "nimbus-sans", sans-serif;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 16px;
     letter-spacing: 1.4px;
     color: inherit;
     transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1); }
@@ -6475,29 +6479,33 @@ a {
     margin: auto auto auto 0; }
   .section.section--hello {
     /* background-color: #FDEF52; */
-    background: url("../images/u3.jpg");
-    /* background: linear-gradient(to top right, hsla(209, 100%, 30%, 0.438), hsla(29, 97%, 42%, 0.335)), url('../images/u3.jpg'); */
-    background-position: center right;
+    /* background: url('../images/u3.jpg'); */
+    background: linear-gradient(to top right, rgba(78, 35, 159, 0.212), rgba(239, 62, 31, 0.164)), url("../images/u3.jpg");
+    background-position: center center;
+    padding-top: 3rem;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    color: black; }
+    color: white;
+    min-height: 130vh !important; }
   .section.section--intro {
-    background-color: #db4369;
+    background-color: #e45c7a;
     color: black; }
     .section.section--intro svg {
-      fill: #db4369; }
+      fill: #e45c7a; }
   .section.section--about {
     color: black;
-    /* background: linear-gradient(to bottom right, hsla(160, 100%, 30%, 0.555), hsla(0, 100%, 30%, 0.377)), url('../images/triangles.jpg'); */
-    background: url("../images/triangles2.jpg");
+    background: linear-gradient(to top right, rgba(237, 237, 243, 0.466), rgba(245, 131, 25, 0.041)), url("../images/triangles2.jpg");
+    /* background: url('../images/triangles2.jpg'); */
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     min-height: 80vh !important; }
+    .section.section--about p {
+      font-weight: 700; }
     .section.section--about svg {
-      fill: #db4369;
+      fill: #e45c7a;
       /* fill: blue; */ }
   .section.section--clients {
     background-color: orange;
@@ -6505,18 +6513,18 @@ a {
     .section.section--clients svg {
       fill: orange; }
   .section.section--portfolio {
-    background-color: #cc5b5b;
-    color: white; }
+    background-color: #e48d82;
+    color: black; }
     .section.section--portfolio svg {
       top: -20px;
-      fill: #cc5b5b; }
+      fill: #e48d82; }
       .section.section--portfolio svg.bottom {
         top: auto;
         bottom: -50px; }
   .section.section--portfolio1 {
     background-color: lightseagreen;
     color: white;
-    background: url("../images/memphis1.jpg");
+    background: linear-gradient(to bottom right, rgba(161, 140, 48, 0.555), rgba(22, 125, 156, 0.596)), url("../images/memphis1.jpg");
     background-repeat: repeat;
     background-size: cover; }
     .section.section--portfolio1 svg {
@@ -6615,3 +6623,11 @@ p {
     font-size: inherit;
     color: #343436;
     opacity: .7; }
+
+.social-bar button .btn.btn-outline-secondary.github:hover {
+  background-color: pink !important; }
+
+.social-bar button a {
+  color: inherit !important; }
+  .social-bar button a .fa-github:hover {
+    color: black !important; }

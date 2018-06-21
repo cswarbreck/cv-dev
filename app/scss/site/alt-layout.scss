@@ -17,6 +17,7 @@ html {
     font-family: $font-serif;
     color: $black;
     font-size: 16px;
+    min-height: 600px !important;
 
     @for $i from 1 through 20 {
         @media (min-width: #{6.25 * $i}em) {
@@ -49,13 +50,14 @@ a {
     bottom: 0;
     z-index: 1000;
     width: $sideWidth;
-    border-right: 2px dashed black;
+    border-right: 3px double black;
     color: rgba(black,.5);
     font-family: $font-sans;
     text-transform: uppercase;
     letter-spacing: .0875rem;
-    font-size: 12px;
+    font-size: 13px;
     transition: $transition;
+    
 
     &:hover {
         color: rgba(black ,.5);
@@ -65,6 +67,8 @@ a {
         position: relative;
         height: 100%;
         white-space: nowrap;
+        min-height: 750px !important;
+        overflow: scroll;
     }
 
     a {
@@ -96,10 +100,11 @@ a {
 
         &:hover {
             a {
-                color: rgba(black,.2);
+                color: black;
+                text-transform: uppercase;
 
                 &:hover {
-                    color: rgba(black,.8);
+                    color: seagreen;
                 }
             }
         }
@@ -134,7 +139,7 @@ a {
         padding: 1em 0;
         font-family: $font-sans;
         text-transform: uppercase;
-        font-size: 12px;
+        font-size: 16px;
         letter-spacing: 1.4px;
         color: inherit;   
         transition: $transition;
@@ -195,37 +200,42 @@ a {
 
     &.section--hello {
         /* background-color: #FDEF52; */
-        background: url('../images/u3.jpg');
-        /* background: linear-gradient(to top right, hsla(209, 100%, 30%, 0.438), hsla(29, 97%, 42%, 0.335)), url('../images/u3.jpg'); */
-        background-position: center right;
+        /* background: url('../images/u3.jpg'); */
+        background: linear-gradient(to top right, hsla(261, 64%, 38%, 0.212), hsla(9, 87%, 53%, 0.164)), url('../images/u3.jpg');
+        background-position: center center;
+        padding-top: 3rem;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-        color: black;
+        color: white;
+        min-height: 130vh !important;
       
     }
 
     &.section--intro {
-        background-color: rgb(219, 67, 105);
+        background-color: rgb(228, 92, 122);
         color: black;  
         svg{
-            fill: rgb(219, 67, 105);
+            fill: rgb(228, 92, 122);
         }      
     }
 
     &.section--about {
 
         color: black;
-        /* background: linear-gradient(to bottom right, hsla(160, 100%, 30%, 0.555), hsla(0, 100%, 30%, 0.377)), url('../images/triangles.jpg'); */
-        background: url('../images/triangles2.jpg');
+        background: linear-gradient(to top right, hsla(240, 19%, 94%, 0.466), hsla(29, 92%, 53%, 0.041)), url('../images/triangles2.jpg');
+        /* background: url('../images/triangles2.jpg'); */
         background-position: bottom center;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
         min-height: 80vh !important;
+        p{
+            font-weight: 700;
+        }
 
         svg {
-            fill: rgb(219, 67, 105);
+            fill: rgb(228, 92, 122);
             /* fill: blue; */
         }
     }
@@ -240,12 +250,13 @@ a {
     }
 
     &.section--portfolio {
-        background-color: rgb(204, 91, 91);
-        color: white;
+        background-color: rgb(228, 141, 130);
+        color: black;
+        
 
         svg {
             top: -20px;
-            fill: rgb(204, 91, 91);
+            fill: rgb(228, 141, 130);
 
             &.bottom {
                 top: auto;
@@ -258,7 +269,7 @@ a {
     &.section--portfolio1 {
         background-color: lightseagreen;
         color: white;
-        background: url("../images/memphis1.jpg");
+        background: linear-gradient(to bottom right, hsla(49, 54%, 41%, 0.555), hsla(194, 75%, 35%, 0.596)), url("../images/memphis1.jpg");
         background-repeat: repeat;
         background-size: cover;
 
@@ -403,5 +414,19 @@ p {
         font-size: inherit;
         color: $grey;
         opacity: .7;
+    }
+}
+
+.social-bar{
+    button{
+        .btn.btn-outline-secondary.github:hover{
+            background-color: pink !important;
+        }
+        a {
+            color: inherit !important;
+            .fa-github:hover{
+                color: black !important;
+            }
+        }
     }
 }
