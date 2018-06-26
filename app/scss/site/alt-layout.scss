@@ -2,7 +2,7 @@ $primary: #de5f5f;
 $black: #555;
 $grey: #343436;
 $lightgrey: #959595;
-$sideWidth: 80px;
+$sideWidth: 3rem;
 
 $font-serif: 'Anonymous Pro', monospace;
 $font-sans-1: 'Anonymous Pro', monospace;
@@ -57,7 +57,9 @@ a {
     letter-spacing: .0875rem;
     font-size: 13px;
     transition: $transition;
-    
+    @media(min-width: 30rem){
+        width: $sideWidth;
+    }
 
     &:hover {
         color: rgba(black ,.5);
@@ -90,9 +92,15 @@ a {
     }
 
     .top {
-        top: $sideWidth * .5;
+        top: $sideWidth * 1.5;
         text-align: right;
         color: black;
+        @media(min-width: 30rem){
+            top: $sideWidth * 1.2;
+        }
+        @media(min-width: 60rem){
+            top: $sideWidth * 0.4;
+        }
     }
     .bottom {
         top: auto;
@@ -223,7 +231,7 @@ a {
     &.section--about {
 
         color: black;
-        background: linear-gradient(to top right, hsla(240, 19%, 94%, 0.466), hsla(29, 92%, 53%, 0.041)), url('../images/triangles2.jpg');
+        background: linear-gradient(to top right, hsla(49, 79%, 85%, 0.692), hsla(9, 87%, 72%, 0.13)), url('../images/triangles2.jpg');
         /* background: url('../images/triangles2.jpg'); */
         background-position: bottom center;
         background-repeat: no-repeat;
@@ -325,15 +333,22 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h5 {
     }
 }
 h1,.h1 {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
+    @media (min-width: 30rem) {
+        font-size: 2.8rem;
+    }
+}
+h2,.h2 {
+    font-size: 1.4rem;
     @media (min-width: 30rem) {
         font-size: 2.5rem;
     }
 }
-h2,.h2 {
+
+h3,.h3 {
     font-size: 1.2rem;
     @media (min-width: 30rem) {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 }
 

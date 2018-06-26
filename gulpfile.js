@@ -4,11 +4,13 @@ var browserSync = require('browser-sync');
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
+var cleanCSS = require('gulp-clean-css');
 var cssnano = require('gulp-cssnano');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence').use(gulp);
+
 
 
 // Browser reloading tasks
@@ -61,11 +63,21 @@ gulp.task('bootstrap', function() {
 // The following tasks will create the production files
 // and send them to the dist folder.
 
+
+gulp.task('minify-css', () => {
+    return gulp.src('app/css/*.css')
+      .pipe(cleanCSS({debug: true}, (details) => {
+        console.log(`${details.name}: ${details.stats.originalSize}`);
+        console.log(`${details.name}: ${details.stats.minifiedSize}`);
+      }))
+    .pipe(gulp.dest('dist/css'));
+  });
+
 gulp.task('useref', function(){
     return gulp.src('app/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
-    .pipe(gulpIf('*.css', cssnano()))
+    .pipe(gulpIf('*.css', cleanCSS()))
     .pipe(gulp.dest('dist'));
 });
 
