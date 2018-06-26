@@ -6357,7 +6357,8 @@ body {
   padding: 0;
   overflow: auto;
   margin: 0;
-  -webkit-overflow-scrolling: touch; }
+  -webkit-overflow-scrolling: touch;
+  background-color: #e45c7a; }
 
 *,
 *::before,
@@ -6480,7 +6481,7 @@ a {
   min-height: 110vh;
   width: 100%;
   align-content: center;
-  padding: 20vh 3rem 20vh 6rem; }
+  padding: 20vh 2.7rem 20vh 5.4rem; }
   .section svg {
     position: absolute;
     top: -50px;
@@ -6509,7 +6510,8 @@ a {
     min-height: 130vh !important; }
   .section.section--intro {
     background-color: #e45c7a;
-    color: black; }
+    color: black;
+    box-shadow: 0px -0.5px #e45c7a; }
     .section.section--intro svg {
       fill: #e45c7a; }
   .section.section--about {

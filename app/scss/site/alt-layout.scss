@@ -2,7 +2,7 @@ $primary: #de5f5f;
 $black: #555;
 $grey: #343436;
 $lightgrey: #959595;
-$sideWidth: 3rem;
+$sideWidth: 2.85rem;
 
 $font-serif: 'Anonymous Pro', monospace;
 $font-sans-1: 'Anonymous Pro', monospace;
@@ -38,6 +38,7 @@ body {
     overflow: auto;
     margin: 0;
     -webkit-overflow-scrolling: touch;
+    background-color: rgb(228, 92, 122);
   }
 
 *,*::before,*::after {
@@ -194,7 +195,7 @@ a {
     min-height: 110vh;
     width: 100%;
     align-content: center;
-    padding: 20vh $sideWidth 20vh $sideWidth * 2;
+    padding: 20vh $sideWidth * 0.9 20vh $sideWidth * 1.8;
 
     svg {
         position: absolute;
@@ -234,9 +235,11 @@ a {
 
     &.section--intro {
         background-color: rgb(228, 92, 122);
-        color: black;  
+        color: black;
+        box-shadow: 0px -0.5px rgb(228, 92, 122);  
         svg{
             fill: rgb(228, 92, 122);
+            
         }      
     }
 
