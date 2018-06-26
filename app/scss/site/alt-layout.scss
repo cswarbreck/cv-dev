@@ -18,6 +18,10 @@ html {
     color: $black;
     font-size: 16px;
     min-height: 600px !important;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
 
     @for $i from 1 through 20 {
         @media (min-width: #{6.25 * $i}em) {
@@ -27,6 +31,14 @@ html {
 
 
 }
+
+body {
+    height: 100%;
+    padding: 0;
+    overflow: auto;
+    margin: 0;
+    -webkit-overflow-scrolling: touch;
+  }
 
 *,*::before,*::after {
     box-sizing: inherit;
