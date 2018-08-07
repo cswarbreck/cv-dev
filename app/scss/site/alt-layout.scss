@@ -240,6 +240,8 @@ a {
         box-shadow: 0px -0.5px rgb(228, 92, 122);  
         svg{
             fill: rgb(228, 92, 122);
+            stroke: rgb(228, 92, 122);
+            stroke-width: 2px;
             
         }      
     }
@@ -260,7 +262,10 @@ a {
 
         svg {
             fill: rgb(228, 92, 122);
-            /* fill: blue; */
+            transform: translateY(50px);
+            stroke: rgb(228, 92, 122);
+            stroke-width: 2px;
+            
         }
     }
 
@@ -279,12 +284,15 @@ a {
         
 
         svg {
-            top: -20px;
+            
             fill: rgb(228, 141, 130);
-
+            stroke: rgb(228, 141, 130);
+            stroke-width: 2px;
             &.bottom {
                 top: auto;
                 bottom: -50px;
+
+                
             }
 
         }
@@ -298,8 +306,10 @@ a {
         background-size: cover;
 
         svg {
-            top: -50px;
-            fill: transparent;
+            fill: orange;
+            transform: translateY(50px);
+            stroke: orange;
+            stroke-width: 2px;
         }
     }
     

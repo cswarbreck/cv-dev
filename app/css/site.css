@@ -6512,7 +6512,9 @@ a {
     color: black;
     box-shadow: 0px -0.5px #e45c7a; }
     .section.section--intro svg {
-      fill: #e45c7a; }
+      fill: #e45c7a;
+      stroke: #e45c7a;
+      stroke-width: 2px; }
   .section.section--about {
     color: black;
     background: linear-gradient(to top right, rgba(247, 236, 187, 0.692), rgba(246, 140, 121, 0.13)), url("../images/triangles2.jpg");
@@ -6526,7 +6528,9 @@ a {
       font-weight: 700; }
     .section.section--about svg {
       fill: #e45c7a;
-      /* fill: blue; */ }
+      transform: translateY(50px);
+      stroke: #e45c7a;
+      stroke-width: 2px; }
   .section.section--clients {
     background-color: orange;
     color: black; }
@@ -6536,8 +6540,9 @@ a {
     background-color: #e48d82;
     color: black; }
     .section.section--portfolio svg {
-      top: -20px;
-      fill: #e48d82; }
+      fill: #e48d82;
+      stroke: #e48d82;
+      stroke-width: 2px; }
       .section.section--portfolio svg.bottom {
         top: auto;
         bottom: -50px; }
@@ -6548,8 +6553,10 @@ a {
     background-repeat: repeat;
     background-size: cover; }
     .section.section--portfolio1 svg {
-      top: -50px;
-      fill: transparent; }
+      fill: orange;
+      transform: translateY(50px);
+      stroke: orange;
+      stroke-width: 2px; }
   .section.section--pepperhill svg {
     top: -50px;
     fill: lightseagreen; }
